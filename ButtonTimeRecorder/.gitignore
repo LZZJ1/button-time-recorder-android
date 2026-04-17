@@ -1,0 +1,10 @@
+# 忽略本地配置文件（包含敏感路径）
+local.properties
+.gradle/
+build/
+*.iml
+.idea/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk

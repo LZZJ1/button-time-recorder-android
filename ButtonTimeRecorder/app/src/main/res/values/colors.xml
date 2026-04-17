@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2c3e50</color>
+    <color name="colorPrimaryDark">#1a252f</color>
+    <color name="colorAccent">#2ecc71</color>
+    <color name="background">#ecf0f1</color>
+    <color name="btnGreen">#4CAF50</color>
+    <color name="btnGreenDark">#45a049</color>
+    <color name="btnRed">#e74c3c</color>
+    <color name="btnRedDark">#c0392b</color>
+    <color name="btnAddGreen">#27ae60</color>
+    <color name="btnOrange">#f39c12</color>
+    <color name="btnPurple">#9b59b6</color>
+    <color name="btnBlue">#3498db</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_dark">#333333</color>
+    <color name="text_gray">#666666</color>
+    <color name="text_light">#999999</color>
+    <color name="header_bg">#2c3e50</color>
+    <color name="table_header_bg">#dde3ea</color>
+</resources>

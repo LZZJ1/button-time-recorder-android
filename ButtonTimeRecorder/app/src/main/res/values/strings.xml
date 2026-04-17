@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">按钮时间记录器</string>
+    <string name="btn_add">+ 添加按钮</string>
+    <string name="hint_button_name">输入按钮名称...</string>
+    <string name="hint_search">搜索按钮...</string>
+    <string name="btn_clear">清空记录</string>
+    <string name="btn_delete_all">删除全部按钮</string>
+    <string name="btn_import">导入Excel</string>
+    <string name="btn_export">导出Excel</string>
+    <string name="label_name">名称:</string>
+    <string name="status_pressed">已按下</string>
+    <string name="status_released">未按下</string>
+    <string name="record_count">记录数: 0</string>
+    <string name="button_count">共 0 个</string>
+    <string name="msg_name_empty">请输入按钮名称！</string>
+    <string name="msg_name_exists">按钮名称已存在！</string>
+    <string name="msg_no_records">没有可导出的记录！</string>
+    <string name="msg_no_buttons">没有可删除的按钮！</string>
+    <string name="msg_confirm_clear">确定要清空所有记录吗？</string>
+    <string name="msg_confirm_delete_all">确定要删除所有按钮吗？\n记录将保留。</string>
+    <string name="msg_export_success">记录已导出到:\n</string>
+    <string name="msg_export_fail">导出失败:\n</string>
+    <string name="dialog_title_confirm">确认</string>
+    <string name="dialog_title_tip">提示</string>
+    <string name="dialog_btn_yes">是</string>
+    <string name="dialog_btn_no">否</string>
+    <string name="dialog_btn_ok">确定</string>
+    <string name="excel_import_format">Excel格式要求：\n- D列（作业站场）或L列（对应占用区段名称）\n- 按钮名称 = 作业站场+对应占用区段名称\n- 从第4行开始读取（跳过表头）</string>
+    <string name="msg_import_no_buttons">未找到有效的按钮名称！\n\n</string>
+    <string name="msg_import_success">已从 Excel 导入 %d 个按钮！</string>
+    <string name="msg_import_fail">导入失败:\n</string>
+</resources>

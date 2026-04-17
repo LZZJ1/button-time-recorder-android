@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 时钟背景圆 -->
+    <path
+        android:fillColor="#2ecc71"
+        android:pathData="M54,20 A34,34 0 1,1 53.99,20 Z"/>
+    <!-- 按钮符号 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M42,46 L66,46 L66,62 L42,62 Z"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"/>
+    <path
+        android:fillColor="#2c3e50"
+        android:pathData="M44,48 L64,48 L64,60 L44,60 Z"/>
+    <!-- 计时符号 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,34 L54,40 M48,36 L44,32 M60,36 L64,32"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"/>
+</vector>

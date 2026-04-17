@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ecf0f1">
+
+    <!-- 顶部标题栏 -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#2c3e50"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="按钮时间记录器"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#2ecc71"
+            android:textSize="13sp"
+            android:fontFamily="monospace"/>
+    </LinearLayout>
+
+    <!-- 添加按钮区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="名称:"
+            android:textSize="14sp"
+            android:textColor="#333"
+            android:paddingEnd="6dp"/>
+
+        <EditText
+            android:id="@+id/etButtonName"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:hint="输入按钮名称..."
+            android:background="@drawable/input_bg"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginStart="8dp"
+            android:text="+ 添加"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:backgroundTint="#27ae60"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"/>
+    </LinearLayout>
+
+    <!-- 搜索框 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#f0f0f0"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="🔍 搜索按钮..."
+            android:background="@drawable/search_bg"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+    <!-- 中间内容区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- 按钮面板 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:background="#ecf0f1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="  按钮面板"
+                        android:textStyle="bold"
+                        android:textColor="#2c3e50"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/tvButtonCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="共 0 个"
+                        android:textSize="11sp"
+                        android:textColor="#999"
+                        android:paddingEnd="10dp"/>
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.example.buttontimerecorder.FlowLayout
+                        android:id="@+id/flowLayoutButtons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="6dp"/>
+                </ScrollView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 记录表格区域 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- 表格标题 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:background="#ecf0f1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="  记录表格"
+                        android:textStyle="bold"
+                        android:textColor="#2c3e50"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/tvRecordCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="记录数: 0"
+                        android:textSize="11sp"
+                        android:textColor="#666"
+                        android:paddingEnd="10dp"/>
+                </LinearLayout>
+
+                <!-- 表头 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="#dde3ea"
+                    android:orientation="horizontal">
+
+                    <TextView android:layout_width="36dp" android:layout_height="match_parent"
+                        android:text="序" android:gravity="center" android:textStyle="bold"
+                        android:textSize="11sp" android:textColor="#444"/>
+                    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#bbb"/>
+                    <TextView android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="1.8" android:text="按钮名称"
+                        android:gravity="center" android:textStyle="bold" android:textSize="11sp" android:textColor="#444"/>
+                    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#bbb"/>
+                    <TextView android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="1.2" android:text="按下时间"
+                        android:gravity="center" android:textStyle="bold" android:textSize="11sp" android:textColor="#444"/>
+                    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#bbb"/>
+                    <TextView android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="1.2" android:text="弹起时间"
+                        android:gravity="center" android:textStyle="bold" android:textSize="11sp" android:textColor="#444"/>
+                    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#bbb"/>
+                    <TextView android:layout_width="0dp" android:layout_height="match_parent"
+                        android:layout_weight="1" android:text="时长"
+                        android:gravity="center" android:textStyle="bold" android:textSize="11sp" android:textColor="#444"/>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvRecords"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <!-- 底部操作按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="3dp"
+            android:text="清空记录"
+            android:textSize="11sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#f39c12"/>
+
+        <Button
+            android:id="@+id/btnDeleteAll"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="3dp"
+            android:text="删除全部"
+            android:textSize="11sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#e74c3c"/>
+
+        <Button
+            android:id="@+id/btnImport"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="3dp"
+            android:text="导入Excel"
+            android:textSize="11sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#9b59b6"/>
+
+        <Button
+            android:id="@+id/btnExport"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="导出Excel"
+            android:textSize="11sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#3498db"/>
+    </LinearLayout>
+
+</LinearLayout>

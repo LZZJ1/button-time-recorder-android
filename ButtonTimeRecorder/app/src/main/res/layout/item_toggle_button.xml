@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:margin="4dp">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- 主按钮 -->
+        <Button
+            android:id="@+id/btnToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:minWidth="80dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="24dp"
+            android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4CAF50"/>
+
+        <!-- 删除按钮 (X) -->
+        <TextView
+            android:id="@+id/btnDelete"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:text="×"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:background="@drawable/delete_btn_bg"
+            android:layout_gravity="top|end"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="未按下"
+        android:textSize="10sp"
+        android:textColor="#999"
+        android:layout_marginTop="2dp"/>
+
+</LinearLayout>
